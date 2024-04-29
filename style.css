@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+   --dark-green: #0c3e26;
+   --green: #8ceb7c;
+   --white-green: #dcffd7;
+   --yellow: #fcff45;
+}
+
+body {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   background-color: var(--dark-green);
+   height: 100vh;
+   overflow: hidden;
+   font-family: 'Inter', sans-serif;
+   scrollbar-width: none;
+}
+
+/* Header */
+.container {
+   width: 1200px;
+   margin: 0 auto;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   padding-top: 3.5rem;
+}
+
+.logo {
+   width: 150px;
+   height: 100%;
+}
+
+.menu_items {
+   display: flex;
+   gap: 3rem;
+}
+
+.menu_item {
+   list-style: none;
+}
+
+.menu_link {
+   text-decoration: none;
+   color: var(--white-green);
+   font-size: 20px;
+}
+
+.nav_btn {
+   background: #fff;
+   color: #121212;
+   width: 190px;
+   height: 65px;
+   border-radius: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   cursor: pointer;
+   outline: 0;
+   transition: all 0.3s ease;
+   border: none;
+}
+
+.nav_btn i {
+   font-size: 24px;
+   font-weight: 600;
+}
+
+.nav_btn-txt {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.nav_btn:hover {
+   background-color: transparent;
+   border: 2px solid var(--white-green);
+   color: var(--white-green);
+   width: 200px;
+}
+
+/* Hero */
+
+.hero_container {
+   display: flex;
+   align-items: center;
+   align-content: center;
+   padding-top: 7rem;
+}
+
+.hero_container .hero_txt {
+   font-size: 75px;
+   width: 320px;
+   line-height: 1;
+   font-weight: 300;
+   letter-spacing: -7px;
+   color: var(--white-green);
+}
+
+.hero_icon {
+   display: flex;
+   flex-direction: row;
+   gap: 12px;
+}
+
+.hero_icon i {
+   font-size: 30px;
+   color: var(--yellow);
+}
+
+.hero_icon .hero_small-txt {
+   font-size: 16px;
+   color: var(--white-green);
+}
+
+.hero_img {
+   width: 420px;
+   height: 420px;
+}
+
+.hero_img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+}
+
+.content_middle {
+   position: relative;
+   margin-left: 5rem;
+}
+
+.content_middle .cta_circle {
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   background-color: var(--yellow);
+   position: absolute;
+   left: 3rem;
+   bottom: -2.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.cta_circle .main_cta-btn {
+   color: #121212;
+   font-size: 16px;
+   text-decoration: none;
+   text-align: center;
+   font-weight: 600;
+}
+
+.cta_circle:hover {
+   transform: scale(1.1);
+}
+
+.content_right {
+   margin-top: 5rem;
+   position: relative;
+}
+
+.content_right .circle {
+   width: 420px;
+   height: 420px;
+   position: relative;
+   border: 2px solid rgba(238, 255, 231, 0.2);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.inner_content p {
+   font-size: 14px;
+   font-weight: 600;
+   text-transform: uppercase;
+   color: var(--green);
+}
+
+.inner_content h3 {
+   font-size: 35px;
+   color: var(--green);
+   font-weight: 500;
+}
+
+.inner_content a {
+   color: var(--yellow);
+   text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.inner_content:hover a {
+   color: #fff;
+}
+
+.small_circle {
+   position: absolute;
+   background-color: var(--white-green);
+   border-radius: 50%;
+   padding: 1rem;
+   top: -2.6rem;
+   left: 5rem;
+   transition: all 0.3s;
+   cursor: pointer;
+}
+
+.small_circle:hover {
+   transform: scale(1.05);
+}
+
+.small_circle i {
+   font-size: 32px;
+}
+
+@media screen and (max-width: 576px) {
+   body {
+      overflow: scroll;
+   }
+
+   .logo {
+      width: 80px;
+      height: 41px;
+   }
+
+   .header {
+      max-width: 500px;
+      display: block;
+      text-align: center;
+   }
+
+   .nav_btn {
+      margin: 0 auto;
+      margin-top: 3rem;
+   }
+
+   .container {
+      flex-direction: column;
+      gap: 8rem;
+      width: 500px;
+   }
+
+   .content_right {
+      margin-bottom: 5rem;
+      margin-top: 8rem;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   body {
+      overflow: scroll;
+   }
+
+   .header {
+      max-width: 500px;
+      display: block;
+      text-align: center;
+   }
+
+   .nav_btn {
+      margin: 0 auto;
+      margin-top: 3rem;
+   }
+
+   .container {
+      flex-direction: column;
+      gap: 8rem;
+      width: 500px;
+   }
+
+   .content_right {
+      margin-bottom: 5rem;
+      margin-top: 8rem;
+   }
+}
